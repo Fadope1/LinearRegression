@@ -9,7 +9,6 @@ import time
 from tqdm import trange
 from tqdm import tqdm
 from os import system as s
-s('cls')
 
 data = pd.read_csv("hotels.csv")
 
@@ -21,8 +20,6 @@ print('Hier sind die Daten veranschaulicht')
 print('Einfach das Bild schliessen um weiter zu machen')
 plt.scatter(data["preis"], data["quadratmeter"], color='red')
 plt.show()
-
-s('cls')
 
 print('Jetzt werden die Anfangspunkte ausgerechnet...')
 time.sleep(1)
@@ -70,8 +67,6 @@ plt.scatter(x1, y1, color='green')
 plt.scatter(x2, y2, color='green')
 plt.show()
 
-s('cls')
-
 print('Jetzt werden m und b für die Anfangslinie ausgerechnet...')
 time.sleep(1)
 
@@ -89,8 +84,6 @@ plt.scatter(x1, y1, color='green')
 plt.scatter(x2, y2, color='green')
 plt.plot(data['preis'], data['preis']*m + b, color='b', label='InitLine')
 plt.show()
-
-s('cls')
 
 # try to minimize the error
 # numpy linearRegression: slope, intercept = np.polyfit(X, Y, 1)
@@ -117,8 +110,6 @@ for i, x in enumerate(tqdm(list(data['preis']))):
     plt.pause(.05)
     plt.cla()
 
-s('cls')
-
 print('Die perfekte Linie wurde ausgerechenet!')
 print('Die perfekte Linie lautet: f(x) = {}x + {}'.format(m, b))
 print('Oder auch y = {}x + {}'.format(m, b))
@@ -141,7 +132,7 @@ mean = durschnitt von datenpunkten
 # Predict the a value:
 # f(x) = mx + b => einsetzen
 # print(m*20 + b)
-s('cls')
+
 print('Jetzt kann man das Program nutzen um vorraussagen zu treffen...')
 while True:
     try:
